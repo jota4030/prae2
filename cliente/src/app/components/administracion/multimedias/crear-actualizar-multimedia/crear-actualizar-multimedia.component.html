@@ -1,5 +1,5 @@
 <section class="content">
-    <div class="box box-success"> 
+    <div class="box box-success">
       <form #form="ngForm" [formGroup]="multimediaForm" (ngSubmit)="onFormSubmit(form)">
         <div class="box-content">
           <div class="box-header">
@@ -10,14 +10,14 @@
                 <div class="col-xs-12 col-sm-6">
                   <div class="form-group">
                     <label for="entradaDescripcion">Nombre</label>
-                    <input type="text" class="form-control" id="entradaDescripcion" placeholder="Nombre" name="f_descripcion" 
+                    <input type="text" class="form-control" id="entradaDescripcion" placeholder="Nombre" name="f_descripcion"
                       formControlName="f_descripcion">
                   </div>
                 </div>
                 <div class="col-xs-12 col-sm-6">
                   <div class="form-group">
                     <label for="entradaElemento">Páginas</label>
-                    <select id="selectPaginas" class="form-control comboBox" style="width: 100%;" name="f_pagina" formControlName="f_pagina"> 
+                    <select id="selectPaginas" class="form-control comboBox" style="width: 100%;" name="f_pagina" formControlName="f_pagina">
                         <option value=""></option>
                         <option *ngFor="let pag of paginas" [value]='pag._id' >{{pag.f_descripcion}}</option>
                     </select>
@@ -26,21 +26,21 @@
                 <div class="col-xs-12 col-sm-6">
                   <div class="form-group">
                     <label for="entradaElemento">ID Elemento</label>
-                    <input type="text" class="form-control" id="entradaElemento" placeholder="ID Elemento" name="f_id_elemento" 
+                    <input type="text" class="form-control" id="entradaElemento" placeholder="ID Elemento" name="f_id_elemento"
                       formControlName="f_id_elemento">
                   </div>
                 </div>
                 <div class="col-xs-12 col-sm-6">
                   <div class="form-group">
                     <label for="entradaUrl">URL Multimedia</label>
-                    <input type="text" class="form-control" id="entradaUrl" placeholder="URL Multimedia" name="f_url" 
+                    <input type="text" class="form-control" id="entradaUrl" placeholder="URL Multimedia" name="f_url"
                       formControlName="f_url">
                   </div>
                 </div>
                 <div class="col-xs-12 col-sm-6">
                   <div class="form-group">
                     <label for="entradaElemento">Tipo Multimedia</label>
-                    <select id="selectTipoMultimedia" class="form-control comboBox" style="width: 100%;" name="f_tipo_multimedia" formControlName="f_tipo_multimedia"> 
+                    <select id="selectTipoMultimedia" class="form-control comboBox" style="width: 100%;" name="f_tipo_multimedia" formControlName="f_tipo_multimedia">
                       <option value=""></option>
                       <option *ngFor="let tipo of tiposMultimedias" [value]='tipo._id' >{{tipo.f_descripcion}}</option>
                     </select>

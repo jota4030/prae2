@@ -3,29 +3,31 @@
     <div class="top-header top-header-style-four">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-8 col-md-8">
+              <div class="col- lg-col-14 col m-auto">
                     <ul class="top-header-contact-info">
-                        <li>
-                            Call: 
-                            <a href="tel:+502464674">+502 464 674</a>
-                        </li>
+                      <li>
+                        Tel:
+                        <a href="#">809-724-0266</a>
+                    </li>
                     </ul>
 
                     <div class="top-header-social">
-                        <span>Follow us:</span>
-                        <a href="#" target="_blank"><i class='fa fa-facebook-official'></i></a>
-                        <a href="#" target="_blank"><i class='fa fa-twitter-square'></i></a>
-                        <a href="#" target="_blank"><i class='fa fa-linkedin-square'></i></a>
-                        <a href="#" target="_blank"><i class='fa fa-instagram'></i></a>
-                    </div>
-                </div>
+                      <span>Siguenos en:</span>
+                      <a href="https://www.facebook.com/uniuapa" target="_blank"><i class='bx bxl-facebook'></i></a>
+                      <a href="https://twitter.com/uniuapa" target="_blank"><i class='bx bxl-twitter'></i></a>
+                      <a href="https://www.uapa.edu.do/radio/" target="_blank"><i class='bx bx-radio'></i></a>
+                      <a href="https://www.instagram.com/uniuapa/" target="_blank"><i class='bx bxl-instagram'></i></a>
+                      <a href="https://www.youtube.com/channel/UCuHpTq7qj7OaErE37P8fQ1Q" target="_blank"><i class='bx bxl-youtube'></i></a>
+                  </div>
+                  <label for="">....</label><label style="color: white; font-size: medium;">Portal de Recursos Académicos y Educativos (PRAE)</label>
+              </div>
 
-                <div class="col-lg-4 col-md-4">
-                    <ul class="top-header-login-register">
-                        <li *ngIf="!loginService.isLoggedIn()"><a routerLink="/login"><i class='fa fa-sign-in'></i> Login</a></li>
-                        <li *ngIf="loginService.isLoggedIn()"><a (click)="logOut()"><i class='fa fa-sign-in'></i> Logout</a></li>
-                    </ul>
-                </div>
+              <div class="col-lg-1 col-md-1">
+                <ul class="top-header-login-register">
+                    <li *ngIf="!loginService.isLoggedIn()"><a routerLink="/login"><i class='bx bx-log-in'></i> Login</a></li>
+                    <li *ngIf="loginService.isLoggedIn()"><a (click)="logOut()"><i class='bx bx-log-in'></i> Logout</a></li>
+                </ul>
+            </div>
             </div>
         </div>
     </div>
@@ -36,7 +38,7 @@
                 <div class="ednuv-responsive-menu">
                     <div class="logo">
                         <a routerLink="/">
-                            <img src="assets/img/logo_educa.jpeg" alt="logo">
+                            <img src="assets/img/black-logo.png" alt="logo">
                         </a>
                     </div>
                 </div>
@@ -47,7 +49,7 @@
             <div class="container">
                 <nav class="navbar navbar-expand-md navbar-light">
                     <a class="navbar-brand" routerLink="/">
-                        <img src="assets/img/logo_educa.jpeg" alt="logo">
+                        <img src="assets/img/black-logo.png" alt="logo">
                     </a>
 
                     <div class="collapse navbar-collapse mean-menu">
@@ -55,193 +57,75 @@
                             <li *ngIf="loginService.isLoggedIn()" class="nav-item"><a href="javascript:void(0)" class="nav-link">Administración<i class='fa fa-chevron-down'></i></a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item"><a routerLink="/paginas" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Páginas</a></li>
-
                                     <li class="nav-item"><a routerLink="/multimedias" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Multimedias</a></li>
-                                    
                                 </ul>
                             </li>
-                            <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Home <i class='fa fa-chevron-down'></i></a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item"><a routerLink="/" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Online Education Portal</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link">Generales <i class='bx bx-chevron-down'></i></a>
+                              <ul class="dropdown-menu">
 
-                                    <li class="nav-item"><a routerLink="/course-portal-online" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Course Portal Online</a></li>
+                                  <li class="nav-item"><a routerLink="#" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Propósito </a></li>
+                                  <li class="nav-item"><a routerLink="#" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Justificación </a></li>
+                                  <li class="nav-item"><a routerLink="#" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Estructura organizativa</a></li>
+                                  <li class="nav-item"><a routerLink="#" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Documentación legal</a></li>
 
-                                    <li class="nav-item"><a routerLink="/distant-learning" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Distant Learning</a></li>
+                              </ul>
+                          </li>
 
-                                    <li class="nav-item"><a routerLink="/modern-teaching" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Modern Teaching</a></li>
+                          <li class="nav-item"><a href="#" class="nav-link">Pedagógicos <i class='bx bx-chevron-down'></i></a>
+                              <ul class="dropdown-menu">
+                                  <li class="nav-item"><a routerLink="/instructor" class="nav-link">Estrategias de enseñanza-aprendizaje  </a></li>
+                                  <li class="nav-item"><a href="#" class="nav-link">Metodología activa y participativa  </a></li>
+                                  <li class="nav-item"><a routerLink="/gallery" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Aprendizaje autónomo y autodirigido </a></li>
+                                  <li class="nav-item"><a href="#" class="nav-link">Mediación pedagógica  </a></li>
+                                  <li class="nav-item"><a routerLink="#" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Buzón de necesidades </a></li>
+                                  <li class="nav-item"><a routerLink="#" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Curso de Iniciación a los participantes de nuevo ingreso </a></li>
+                                  <li class="nav-item"><a routerLink="/partner" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Curso de Iniciación a los participantes de nuevo ingreso </a></li>
+                                  <li class="nav-item"><a routerLink="/#" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Evaluación de los Aprendizajes </a></li>
 
-                                    <li class="nav-item"><a routerLink="/online-schooling" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Online Schooling</a></li>
+                              </ul>
+                          </li>
 
-                                    <li class="nav-item"><a routerLink="/learning-school-online" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Learning School Online</a></li>
+                          <li class="nav-item"><a href="#" class="nav-link">Tecnológicos <i class='bx bx-chevron-down'></i></a>
+                              <ul class="dropdown-menu">
+                                  <li class="nav-item"><a href="#" class="nav-link">Para crear y compartir contenidos  <i class='bx bx-chevron-right'></i></a></li>
+                                  <li class="nav-item"><a routerLink="/#" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Presentadores Electrónicos </a></li>
+                                  <li class="nav-item"><a href="#" class="nav-link">Comunicación </a></li>
+                                  <li class="nav-item"><a href="#" class="nav-link">Paquette de office  <i class='bx bx-chevron-right'></i></a></li>
+                                  <li class="nav-item"><a href="#" class="nav-link">Hacer objetos de aprendizaje  <i class='bx bx-chevron-right'></i></a></li>
+                                  <li class="nav-item"><a routerLink="/#" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Recursos audiovisuales </a></li>
+                                  <li class="nav-item"><a routerLink="/#" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Plataformas educativas </a></li>
+                                  <li class="nav-item"><a href="#" class="nav-link">Otros   <i class='bx bx-chevron-right'></i></a></li>
+                                  <li class="nav-item"><a href="#" class="nav-link">Creación de Webquest   <i class='bx bx-chevron-right'></i></a></li>
+                                  <li class="nav-item"><a routerLink="/#" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Mapas  </a></li>
+                                  <li class="nav-item"><a routerLink="/#" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Trabajo colaborativo  </a></li>
+                                  <li class="nav-item"><a href="#" class="nav-link">Tutoriales-UAPA  </a></li>
+                              </ul>
+                          </li>
 
-                                    <li class="nav-item"><a routerLink="/remote-training-online" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Remote Training Online</a></li>
-                                </ul>
-                            </li>
+                          <li class="nav-item"><a href="#" class="nav-link">Formación continua </a>
+                              <ul class="dropdown-menu">
+                              <li class="nav-item"><a href="#" class="nav-link">Práctica docente  </a> </li>
+                              <li class="nav-item"><a routerLink="/#" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Capacitación constante y continuada   </a></li>
+                              <li class="nav-item"><a routerLink="/#" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Boletín tecnopedagógico  </a></li>
+                              <li class="nav-item"><a href="#" class="nav-link">Cronogramas de eventos académicos y de investigación  </a></li>
+                          </ul>
+                          </li>
 
-                            <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Pages <i class='fa fa-chevron-down'></i></a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item"><a href="#" class="nav-link">About <i class='fa fa-chevron-right'></i></a>
-                                        <ul class="dropdown-menu">
-                                            <li class="nav-item"><a routerLink="/about-style-1" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">About Style 1</a></li>
+                          <li class="nav-item"><a href="#" class="nav-link">Documentos UAPA <i class='bx bx-chevron-down'></i></a>
+                              <ul class="dropdown-menu">
+                                  <li class="nav-item"><a href="#" class="nav-link">MECCA  </a> </li>
+                                  <li class="nav-item"><a routerLink="/#" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Prioridades rectorales en los planes operativos anual 2020    </a></li>
+                                  <li class="nav-item"><a routerLink="/#" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Reglamento Académico de Postgrado   </a></li>
+                                  <li class="nav-item"><a href="#" class="nav-link">Reglamento para trabajo en entornos virtuales   </a></li>
+                                  <li class="nav-item"><a href="#" class="nav-link">Reglamento de investigación   </a> </li>
+                                  <li class="nav-item"><a routerLink="/#" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Reglamento de Tesis    </a></li>
+                                  <li class="nav-item"><a routerLink="/#" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Reglamento de los Aprendizaje   </a></li>
+                                  <li class="nav-item"><a href="#" class="nav-link">Código de ética  </a></li>
 
-                                            <li class="nav-item"><a routerLink="/about-style-2" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">About Style 2</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="nav-item"><a href="#" class="nav-link">Instructor <i class='fa fa-chevron-right'></i></a>
-                                        <ul class="dropdown-menu">
-                                            <li class="nav-item"><a routerLink="/instructor-1" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Instructor Style 1</a></li>
-    
-                                            <li class="nav-item"><a routerLink="/instructor-2" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Instructor Style 2</a></li>
-
-                                            <li class="nav-item"><a routerLink="/instructor-3" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Instructor Style 3</a></li>
-
-                                            <li class="nav-item"><a routerLink="/single-instructor" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Instructor Details</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="nav-item"><a routerLink="/gallery" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Gallery</a></li>
-
-                                    <li class="nav-item"><a href="#" class="nav-link">Events <i class='fa fa-chevron-right'></i></a>
-                                        <ul class="dropdown-menu">
-                                            <li class="nav-item"><a routerLink="/events" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Events</a></li>
-
-                                            <li class="nav-item"><a routerLink="/single-events" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Events Details</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="nav-item"><a routerLink="/pricing" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Pricing</a></li>
-
-                                    <li class="nav-item"><a routerLink="/feedback" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Feedback</a></li>
-
-                                    <li class="nav-item"><a routerLink="/partner" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Partner</a></li>
-
-                                    <li class="nav-item"><a routerLink="/login" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Log In</a></li>
-
-                                    <li class="nav-item"><a routerLink="/register" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Register</a></li>
-
-                                    <li class="nav-item"><a routerLink="/faqs" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">FAQ's</a></li>
-
-                                    <li class="nav-item"><a routerLink="/error-404" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">404 Error</a></li>
-
-                                    <li class="nav-item"><a routerLink="/coming-soon" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Coming Soon</a></li>
-                                </ul>
-                            </li>
-
-                            <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Courses <i class='fa fa-chevron-down'></i></a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Courses Category <i class='fa fa-chevron-right'></i></a>
-                                        <ul class="dropdown-menu">
-                                            <li class="nav-item"><a routerLink="/courses-category-style-1" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Category Style 1</a></li>
-
-                                            <li class="nav-item"><a routerLink="/courses-category-style-2" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Category Style 2</a></li>
-
-                                            <li class="nav-item"><a routerLink="/courses-category-style-3" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Category Style 3</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="nav-item"><a routerLink="/courses-list" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Courses List</a></li>
-
-                                    <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Courses Grid Style 1 <i class='fa fa-chevron-right'></i></a>
-                                        <ul class="dropdown-menu">
-                                            <li class="nav-item"><a routerLink="/courses-2-columns-style-1" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">2 Columns</a></li>
-
-                                            <li class="nav-item"><a routerLink="/courses-3-columns-style-1" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">3 Columns</a></li>
-
-                                            <li class="nav-item"><a routerLink="/courses-4-columns-style-1" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">4 Columns Full Width</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Courses Grid Style 2 <i class='fa fa-chevron-right'></i></a>
-                                        <ul class="dropdown-menu">
-                                            <li class="nav-item"><a routerLink="/courses-2-columns-style-2" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">2 Columns</a></li>
-
-                                            <li class="nav-item"><a routerLink="/courses-3-columns-style-2" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">3 Columns</a></li>
-
-                                            <li class="nav-item"><a routerLink="/courses-4-columns-style-2" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">4 Columns Full Width</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Courses Grid Style 3 <i class='fa fa-chevron-right'></i></a>
-                                        <ul class="dropdown-menu">
-                                            <li class="nav-item"><a routerLink="/courses-2-columns-style-3" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">2 Columns</a></li>
-
-                                            <li class="nav-item"><a routerLink="/courses-3-columns-style-3" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">3 Columns</a></li>
-
-                                            <li class="nav-item"><a routerLink="/courses-4-columns-style-3" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">4 Columns Full Width</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="nav-item"><a routerLink="/single-courses" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Courses Details</a></li>
-                                    
-                                    <li class="nav-item"><a routerLink="/my-dashboard" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">My Dashboard</a></li>
-                                </ul>
-                            </li>
-
-                            <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Blog <i class='fa fa-chevron-down'></i></a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item"><a routerLink="/blog-style-1" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Blog Grid</a></li>
-
-                                    <li class="nav-item"><a routerLink="/blog-style-2" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Blog Right Sidebar</a></li>
-
-                                    <li class="nav-item"><a routerLink="/blog-style-3" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Blog Grid Full Width</a></li>
-
-                                    <li class="nav-item"><a routerLink="/single-blog" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Blog Details</a></li>
-                                </ul>
-                            </li>
-
-                            <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Shop <i class='fa fa-chevron-down'></i></a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item"><a routerLink="/shop-grid" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Shop Grid</a></li>
-
-                                    <li class="nav-item"><a routerLink="/shop-grid-fullwidth" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Shop Grid FullWidth</a></li>
-
-                                    <li class="nav-item"><a routerLink="/single-products" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Products Details</a></li>
-                                    
-                                    <li class="nav-item"><a routerLink="/cart" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Cart</a></li>
-
-                                    <li class="nav-item"><a routerLink="/checkout" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Checkout</a></li>
-                                </ul>
-                            </li>
-
-                            <li class="nav-item"><a routerLink="/contact" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Contact</a></li>
-                        </ul>
+                                  </ul>
+                          </li>                        </ul>
 
                         <div class="others-option">
-                            <div class="dropdown language-switcher d-inline-block">
-                                <button class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <img src="assets/img/us-flag.jpg" class="shadow" alt="image">
-                                    <span>Eng <i class='fa fa-chevron-down'></i></span>
-                                </button>
-
-                                <div class="dropdown-menu">
-                                    <a href="#" class="dropdown-item d-flex align-items-center">
-                                        <img src="assets/img/germany-flag.jpg" class="shadow-sm" alt="flag">
-                                        <span>Ger</span>
-                                    </a>
-                                    <a href="#" class="dropdown-item d-flex align-items-center">
-                                        <img src="assets/img/france-flag.jpg" class="shadow-sm" alt="flag">
-                                        <span>Fre</span>
-                                    </a>
-                                    <a href="#" class="dropdown-item d-flex align-items-center">
-                                        <img src="assets/img/spain-flag.jpg" class="shadow-sm" alt="flag">
-                                        <span>Spa</span>
-                                    </a>
-                                    <a href="#" class="dropdown-item d-flex align-items-center">
-                                        <img src="assets/img/russia-flag.jpg" class="shadow-sm" alt="flag">
-                                        <span>Rus</span>
-                                    </a>
-                                    <a href="#" class="dropdown-item d-flex align-items-center">
-                                        <img src="assets/img/italy-flag.jpg" class="shadow-sm" alt="flag">
-                                        <span>Ita</span>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <a routerLink="/cart" class="cart-wrapper-btn d-inline-block">
-                                <i class='fa fa-shopping-cart'></i>
-                                <span>01</span>
-                            </a>
 
                             <div class="search-box d-inline-block">
                                 <i class='fa fa-search'></i>
@@ -252,7 +136,7 @@
             </div>
         </div>
     </div>
-    
+
 </header>
 
 <div class="search-overlay">
@@ -261,7 +145,7 @@
             <div class="search-overlay-layer"></div>
             <div class="search-overlay-layer"></div>
             <div class="search-overlay-layer"></div>
-            
+
             <div class="search-overlay-close">
                 <span class="search-overlay-close-line"></span>
                 <span class="search-overlay-close-line"></span>
@@ -270,7 +154,7 @@
             <div class="search-overlay-form">
                 <form>
                     <input type="text" class="input-search" placeholder="Search here...">
-                    <button type="submit"><i class='fa fa-search'></i></button>
+                    <button type="submit"><i class='bx bx-search-alt'></i></button>
                 </form>
             </div>
         </div>

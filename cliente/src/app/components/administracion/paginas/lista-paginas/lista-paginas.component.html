@@ -17,7 +17,7 @@
         </div>
     </div>
     <!-- /.content-header -->
-    
+
     <section class="content">
         <div class="container-fluid">
             <div class="">
@@ -29,15 +29,15 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <ngx-datatable 
-                            #paginasTabla 
-                            class='bootstrap' 
-                            [columnMode]="'force'" 
-                            [rows]="paginas" 
-                            [headerHeight]="50" 
-                            [footerHeight]="50" 
-                            [rowHeight]="40" 
-                            [limit]="5" 
+                        <ngx-datatable
+                            #paginasTabla
+                            class='bootstrap'
+                            [columnMode]="'force'"
+                            [rows]="paginas"
+                            [headerHeight]="50"
+                            [footerHeight]="50"
+                            [rowHeight]="40"
+                            [limit]="5"
                             [messages]="{emptyMessage:'',totalMessage: 'Total',selectedMessage: 'Seleccionado'}"
                             >
                             <ngx-datatable-column name="Nombre" prop="f_descripcion">
@@ -52,14 +52,14 @@
                             </ngx-datatable-column>
                             <ngx-datatable-column name="Activo" prop="f_activo">
                                 <ng-template let-value="value" let-row="row" ngx-datatable-cell-template>
-                                    <strong><i *ngIf="value" title="Eliminar" class="fa fa-check text-success"></i>  <i *ngIf="!value" title="Eliminar" class="fa fa-times text-danger"></i></strong>
+                                    <strong><i *ngIf="value" title="Eliminar" class='bx bx-check'></i>  <i *ngIf="!value" title="Eliminar" class="bx bx-x"></i></strong>
                                 </ng-template>
                             </ngx-datatable-column>
                             <ngx-datatable-column name="Acciones" prop="accion" headerClass="central" [width]="200">
                                 <ng-template let-value="value" let-row="row" ngx-datatable-cell-template class="centralizar">
                                     <div class="acciones text-end">
-                                        <span class="botonesAccionPagina cursor-point mr-3" (click)="eventoClickEditarPagina($event, row)"><i title="Editar" class="fa fa-pencil text-primary"></i></span>
-                                        <span class="botonesAccionPagina cursor-point" (click)="eventoClickDesactivarPagina($event, row)"><i *ngIf="row.f_activo" title="Desactivar" class="fa fa-bell text-success"></i> <i *ngIf="!row.f_activo" title="Activar" class="fa fa-bell-slash text-danger"></i></span>
+                                        <span class="botonesAccionPagina cursor-point mr-3" (click)="eventoClickEditarPagina($event, row)"><i title="Editar" class="bx bx-edit-alt"></i></span>
+                                        <span class="botonesAccionPagina cursor-point" (click)="eventoClickDesactivarPagina($event, row)"><i *ngIf="row.f_activo" title="Desactivar" class="bx bx-lock-alt"></i> <i *ngIf="!row.f_activo" title="Activar" class="bx bx-bell"></i></span>
                                     </div>
                                 </ng-template>
                             </ngx-datatable-column>

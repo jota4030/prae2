@@ -7,6 +7,13 @@
     z-index: 1;
     transition: var(--transition);
 
+    .centrado {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
     &::after {
         content: "";
         position: absolute;
@@ -143,7 +150,7 @@
 }
 
 @media only screen and (max-width: 767px) {
-    
+
     .single-instructor-member {
         .member-content {
             top: auto;

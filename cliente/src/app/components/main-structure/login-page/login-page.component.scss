@@ -2,7 +2,7 @@
     height: 100%;
     width: 100%;
     background: {
-        image: url(../../../../assets/img/login-bg.jpg);
+        image: url(../../../../assets/img/login-bg9.jpg);
         position: center center;
         size: cover;
         repeat: no-repeat;
@@ -13,7 +13,7 @@
 }
 .login-content {
     height: 100vh;
-    
+
     .login-form {
         text-align: center;
         max-width: 500px;
@@ -23,7 +23,7 @@
         };
         .logo {
             margin-bottom: 30px;
-            
+
             a {
                 display: inline-block;
             }
@@ -72,13 +72,13 @@
                 width: 100%;
                 padding: 13px 25px 12px 25px;
                 position: relative;
-                background-color: #ff1949;
+                background-color: #09183A;
                 color: var(--whiteColor);
                 box-shadow: 0px 5px 28.5px 1.5px rgba(255, 97, 47, 0.2);
                 border: {
                     width: 2px;
                     style: solid;
-                    color: #ff1949;
+                    color: #09183A;
                     radius: 5px;
                 };
                 font: {
@@ -97,7 +97,7 @@
 
                 a {
                     display: inline-block;
-                    color: #ff1949;
+                    color: #FF8202;
                     text-decoration: underline;
 
                     &:hover {
@@ -112,12 +112,12 @@
                     display: block;
                     width: 100%;
                     position: relative;
-                    border: 1px solid #ff1949;
+                    border: 1px solid #09183A;
                     background-color: transparent;
                     transition: var(--transition);
                     padding: 12px 30px;
                     border-radius: 2px;
-                    color: #ff1949;
+                    color: #09183A;
                     font: {
                         weight: 500;
                     }
@@ -132,7 +132,7 @@
                         border-color: #3b5998;
                         color: #3b5998;
                         box-shadow: 0px 5px 28.5px 1.5px rgba(59, 89, 152, 0.2);
-                        
+
                         &:hover {
                             background-color: #3b5998;
                             color: var(--whiteColor);
@@ -141,20 +141,20 @@
                     }
                     &.twitter {
                         margin-top: 10px;
-                        border-color: #1da1f2;
-                        color: #1da1f2;
+                        border-color: #FF8202;
+                        color: #FF8202;
                         box-shadow: 0px 5px 28.5px 1.5px rgba(29, 161, 242, 0.2);
-                        
+
                         &:hover {
-                            background-color: #1da1f2;
+                            background-color: #FF8202;
                             color: var(--whiteColor);
-                            border-color: #1da1f2;
+                            border-color: #FF8202;
                         }
                     }
                     &:hover {
-                        background-color: #ff1949;
+                        background-color: #FF8202;
                         color: var(--whiteColor);
-                        border-color: #ff1949;
+                        border-color: #FF8202;
                     }
                 }
             }

@@ -1,41 +1,9 @@
-.d-table {
-    width: 100%;
-    height: 100%;
-}
-.d-table-cell {
-    vertical-align: middle;
-}
-
-a {
-    text-decoration: none;
-    transition: var(--transition);
-    color: var(--blackColor);
-}
-
-a:hover, a:focus {
-    color: #ff1949;
-    text-decoration: none;
-}
-
-input, button, a {
-    outline: 0 !important;
-  }
-
-  img {
-    max-width: 100%;
-    height: auto;
-  }  
-
-.cursor-point {
-    cursor: pointer;
-}
-
 /* You can add global styles to this file, and also import other style files */
 :root {
     --fontFamily1: 'Poppins', sans-serif;
     --fontFamily2: 'Open Sans', sans-serif;
-    --mainColor: #ff1949;
-    --optionalColor: #0eb582;
+    --mainColor: #FF8202;
+    --optionalColor: #FF8202;
     --whiteColor: #ffffff;
     --blackColor: #252525;
     --paragraphColor: #727695;
@@ -373,7 +341,7 @@ textarea.form-control {
             }
         }
         &:hover, &:focus {
-            .owl-nav {    
+            .owl-nav {
                 [class*=owl-] {
                     left: -70px;
                     opacity: 1;
@@ -443,7 +411,7 @@ textarea.form-control {
             }
         }
         &:hover, &:focus {
-            .owl-nav {    
+            .owl-nav {
                 [class*=owl-] {
                     left: -70px;
                     opacity: 1;
@@ -533,7 +501,7 @@ textarea.form-control {
             }
         }
         &:hover, &:focus {
-            .owl-nav {    
+            .owl-nav {
                 [class*=owl-] {
                     left: -70px;
                     opacity: 1;
@@ -609,7 +577,7 @@ textarea.form-control {
             }
         }
         &:hover, &:focus {
-            .owl-nav {    
+            .owl-nav {
                 [class*=owl-] {
                     left: 70px;
 
@@ -672,7 +640,7 @@ textarea.form-control {
             }
         }
         &:hover, &:focus {
-            .owl-nav {    
+            .owl-nav {
                 [class*=owl-] {
                     left: -70px;
                     opacity: 1;
@@ -876,25 +844,25 @@ textarea.form-control {
 @keyframes border-transform {
     0%,100% {
         border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;
-    } 
+    }
 	14% {
         border-radius: 40% 60% 54% 46% / 49% 60% 40% 51%;
-    } 
+    }
 	28% {
         border-radius: 54% 46% 38% 62% / 49% 70% 30% 51%;
-    } 
+    }
 	42% {
         border-radius: 61% 39% 55% 45% / 61% 38% 62% 39%;
-    } 
+    }
 	56% {
         border-radius: 61% 39% 67% 33% / 70% 50% 50% 30%;
-    } 
+    }
 	70% {
         border-radius: 50% 50% 34% 66% / 56% 68% 32% 44%;
-    } 
+    }
 	84% {
         border-radius: 46% 54% 50% 50% / 35% 61% 39% 65%;
-    } 
+    }
 }
 @keyframes ripple {
     0% {
@@ -914,7 +882,7 @@ textarea.form-control {
 .courses-categories-area {
     position: relative;
     z-index: 1;
-    
+
     &.bg-image {
         background-image: url(assets/img/pattern.jpg);
     }
@@ -1004,7 +972,7 @@ textarea.form-control {
 .partner-area {
     &.bg-color {
         background-color: var(--mainColor);
-    
+
         .section-title {
             h2 {
                 color: var(--whiteColor);
@@ -1581,7 +1549,7 @@ textarea.form-control {
 .tab {
     .tabs-item {
         display: none;
-        
+
         &:first-child {
             display: block;
         }
@@ -1731,7 +1699,7 @@ textarea.form-control {
     .widget_search {
         form {
             position: relative;
-            
+
             .screen-reader-text {
                 display: none;
             }
@@ -1786,7 +1754,7 @@ textarea.form-control {
     .widget_ednuv_posts_thumb {
         position: relative;
         overflow: hidden;
-        
+
         .item {
             overflow: hidden;
             margin-bottom: 15px;
@@ -2011,7 +1979,7 @@ textarea.form-control {
         height: 400px;
         text-align: center;
         background: {
-            image: url(assets/img/mission-bg.jpg);
+            image: url(assets/img/offer-bg.jpg);
             position: center center;
             size: cover;
             repeat: no-repeat;
@@ -2518,7 +2486,7 @@ blockquote, .blockquote {
     .instructor-area {
         overflow: hidden;
     }
-    
+
     .feedback-slides {
         &.owl-theme {
             margin-bottom: 0;
@@ -2550,7 +2518,7 @@ blockquote, .blockquote {
             }
         }
     }
-    
+
     .blog-slides {
         &.owl-theme {
             .owl-nav {
@@ -2659,11 +2627,11 @@ blockquote, .blockquote {
             }
         }
     }
-    
+
     .feedback-form-area {
         margin-top: -10px;
     }
-    
+
     .divider {
         bottom: -1px;
     }
@@ -2707,7 +2675,7 @@ blockquote, .blockquote {
             }
         }
     }
-    
+
     .courses-topbar {
         text-align: center;
 
@@ -2895,7 +2863,7 @@ blockquote, .blockquote {
     .divider {
         bottom: -1px;
     }
-	
+
     .courses-categories-slides {
         &.owl-theme {
             .owl-nav {
@@ -3040,7 +3008,7 @@ blockquote, .blockquote {
             }
         }
     }
-    
+
     .home-slides {
         &.owl-theme {
             .owl-nav {
@@ -3053,7 +3021,7 @@ blockquote, .blockquote {
             }
         }
     }
-    
+
     .widget-area {
         margin-top: 40px;
     }
@@ -3067,7 +3035,7 @@ blockquote, .blockquote {
 
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
-    
+
     .courses-categories-slides {
         &.owl-theme {
             .owl-nav {

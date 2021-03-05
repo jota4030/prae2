@@ -16,10 +16,14 @@ import { HeaderStyleOneComponent } from './components/main-structure/header-styl
 import { FooterComponent } from './components/main-structure/footer/footer.component';
 import { LoginPageComponent } from './components/main-structure/login-page/login-page.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
+import { HomeoneMainBannerComponent } from './components/main-structure/homeone-main-banner/homeone-main-banner.component';
 import { CrearActualizarMultimediaComponent } from './components/administracion/multimedias/crear-actualizar-multimedia/crear-actualizar-multimedia.component';
 import { ListaMultimediasComponent } from './components/administracion/multimedias/lista-multimedias/lista-multimedias.component';
 import { CrearActualizarPaginasComponent } from './components/administracion/paginas/crear-actualizar-paginas/crear-actualizar-paginas.component';
 import { ListaPaginasComponent } from './components/administracion/paginas/lista-paginas/lista-paginas.component';
+import { HomeoneAboutComponent } from './components/main-structure/homeone-about/homeone-about.component';
+import { FunfactsComponent } from './components/main-structure/funfacts/funfacts.component';
+
 
 import { InstructorsPageOneComponent } from './components/paginas/instructors-page-one/instructors-page-one.component';
 import { HeaderStyleTwoComponent } from './components/main-structure/header-style-two/header-style-two.component';
@@ -32,6 +36,7 @@ import { BecomeInstructorPartnerComponent } from './components/main-structure/be
     AppComponent,
     HeaderStyleOneComponent,
     FooterComponent,
+    FunfactsComponent,
     LoginPageComponent,
     HomePageComponent,
     CrearActualizarMultimediaComponent,
@@ -42,7 +47,9 @@ import { BecomeInstructorPartnerComponent } from './components/main-structure/be
     HeaderStyleTwoComponent,
     HeaderStyleThreeComponent,
     HeaderStyleFourComponent,
+    HomeoneMainBannerComponent,
     BecomeInstructorPartnerComponent,
+    HomeoneAboutComponent,
   ],
   imports: [
     BrowserModule,

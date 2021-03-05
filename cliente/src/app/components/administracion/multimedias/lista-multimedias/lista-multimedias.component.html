@@ -5,19 +5,19 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0 text-dark">Multimedias</h1>
+                    <h1 class="m-0 text-dark">Recursos</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">Multimedias</li>
+                        <li class="breadcrumb-item active">Recursos</li>
                     </ol>
                 </div>
             </div>
         </div>
     </div>
     <!-- /.content-header -->
-    
+
     <section class="content">
         <div class="container-fluid">
             <div class="">
@@ -25,19 +25,19 @@
                     <div class="card-header with-border">
                         <div class="toolbar text-right my-2">
                             <button (click)="eventoClickNuevaMultimedia()" class="btn btn-info">
-                            <i class="fa fa-plus mr-1"></i>Nueva Multimedia</button>
+                            <i class="fa fa-plus mr-1"></i>Nuevo Recursos</button>
                         </div>
                     </div>
                     <div class="card-body">
-                        <ngx-datatable 
-                            #multimediasTabla 
-                            class='bootstrap' 
-                            [columnMode]="'force'" 
-                            [rows]="multimedias" 
-                            [headerHeight]="50" 
-                            [footerHeight]="50" 
-                            [rowHeight]="40" 
-                            [limit]="5" 
+                        <ngx-datatable
+                            #multimediasTabla
+                            class='bootstrap'
+                            [columnMode]="'force'"
+                            [rows]="multimedias"
+                            [headerHeight]="50"
+                            [footerHeight]="50"
+                            [rowHeight]="40"
+                            [limit]="5"
                             [messages]="{emptyMessage:'',totalMessage: 'Total',selectedMessage: 'Seleccionado'}"
                             >
                             <ngx-datatable-column name="Nombre" prop="f_descripcion">
@@ -67,14 +67,14 @@
                             </ngx-datatable-column>
                             <ngx-datatable-column name="Activo" prop="f_activo">
                                 <ng-template let-value="value" let-row="row" ngx-datatable-cell-template>
-                                    <strong><i *ngIf="value" title="Activo" class="fa fa-check text-success"></i>  <i *ngIf="!value" title="Desactivado" class="fa fa-times text-danger"></i></strong>
+                                    <strong><i *ngIf="value" title="Activo" class="bx bx-check"></i>  <i *ngIf="!value" title="Desactivado" class=" bx bx-x"></i></strong>
                                 </ng-template>
                             </ngx-datatable-column>
                             <ngx-datatable-column name="Acciones" prop="accion" headerClass="central" [width]="200">
                                 <ng-template let-value="value" let-row="row" ngx-datatable-cell-template class="centralizar">
                                     <div class="acciones text-end">
-                                        <span class="botonesAccionMultimedia cursor-point mr-3" (click)="eventoClickEditarMultimedia($event, row)"><i title="Editar" class="fa fa-pencil text-primary"></i></span>
-                                        <span class="botonesAccionMultimedia cursor-point" (click)="eventoClickDesactivarMultimedia($event, row)"><i *ngIf="row.f_activo" title="Desactivar" class="fa fa-bell text-success"></i> <i *ngIf="!row.f_activo" title="Activar" class="fa fa-bell-slash text-danger"></i></span>
+                                        <span class="botonesAccionMultimedia cursor-point mr-3" (click)="eventoClickEditarMultimedia($event, row)"><i title="Editar" class="bx bx-edit-alt"></i></span>
+                                        <span class="botonesAccionMultimedia cursor-point" (click)="eventoClickDesactivarMultimedia($event, row)"><i *ngIf="row.f_activo" title="Desactivar" class="bx bx-lock-alt"></i> <i *ngIf="!row.f_activo" title="Activar" class="bx bx-bell"></i></span>
                                     </div>
                                 </ng-template>
                             </ngx-datatable-column>

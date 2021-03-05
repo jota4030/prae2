@@ -37,7 +37,7 @@
                 color: #cccccc;
 
                 &:hover, &:focus {
-                    color: #ff1949;
+                    color: var(--mainColor);
                 }
             }
             &:last-child {
@@ -61,7 +61,7 @@
                 color: #cccccc;
 
                 &:hover, &:focus {
-                    color: #ff1949;
+                    color: var(--mainColor);
                     padding-left: 7px;
                 }
             }
@@ -83,7 +83,7 @@
                 color: #cccccc;
 
                 &:hover, &:focus {
-                    color: #ff1949;
+                    color: var(--mainColor);
                     padding-left: 7px;
                 }
             }
@@ -104,7 +104,7 @@
                 width: 30px;
                 height: 30px;
                 text-align: center;
-                color: #ff1949;
+                color: var(--mainColor);
                 background-color: var(--whiteColor);
                 font-size: 18px;
                 position: relative;
@@ -118,7 +118,7 @@
                     transform: translateY(-49%);
                 }
                 &:hover, &:focus {
-                    background-color: #ff1949;
+                    background-color: var(--mainColor);
                     color: var(--whiteColor);
                 }
             }
@@ -154,7 +154,7 @@
                 }
                 &:focus {
                     padding-left: 12px;
-                    border-color: #ff1949;
+                    border-color: var(--mainColor);
                 }
             }
             button {
@@ -162,7 +162,7 @@
                 margin-top: .9rem;
                 width: 100%;
                 border-radius: .25rem;
-                background-color: #ff1949;
+                background-color: var(--mainColor);
                 color: var(--whiteColor);
                 border: none;
                 padding: 12px 25px;
@@ -210,7 +210,7 @@
             color: var(--whiteColor);
 
             &:hover, &:focus {
-                color: #ff1949;
+                color: var(--mainColor);
                 text-decoration: underline;
             }
         }
@@ -224,7 +224,7 @@
     bottom: -42px;
 	right: 15px;
 	color: var(--whiteColor);
-	background-color: #ff1949;
+	background-color: var(--mainColor);
 	z-index: 4;
 	width: 42px;
 	text-align: center;

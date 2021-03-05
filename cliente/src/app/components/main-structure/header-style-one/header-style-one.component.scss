@@ -13,7 +13,7 @@
 }
 
 .top-header {
-    background-color: #ff1949;
+    background-color: var(--mainColor);
     padding: {
         top: 15px;
         bottom: 25px;
@@ -26,7 +26,7 @@
 
     li {
         display: inline-block;
-        color: #ffffff;
+        color: var(--whiteColor);
         margin-right: 20px;
         position: relative;
         padding-left: 38px;
@@ -45,7 +45,7 @@
         }
         a {
             display: inline-block;
-            color: #ffffff;
+            color: var(--whiteColor);
             font: {
                 size: 15px;
                 weight: 700;
@@ -63,27 +63,27 @@
     text-align: right;
 
     .default-btn {
-        background-color: #ffffff;
-        color: #ff1949;
-        border-color: #ffffff;
-        
+        background-color: var(--whiteColor);
+        color: var(--mainColor);
+        border-color: var(--whiteColor);
+
         .icon-arrow {
-            color: #ff1949;
+            color: var(--mainColor);
             transition: var(--transition);
         }
         &:hover, &:focus {
             background-color: var(--blackColor);
-            color: #ffffff;
+            color: var(--whiteColor);
             border-color: var(--blackColor);
-        
+
             .icon-arrow {
-                color: #ffffff;
+                color: var(--whiteColor);
             }
         }
     }
 }
 .top-header-style-two {
-    background-color: #ffffff;
+    background-color: var(--whiteColor);
     padding: {
         top: 15px;
         bottom: 15px;
@@ -94,15 +94,15 @@
         li {
             color: var(--paragraphColor);
             text-align: left;
-    
+
             i {
-                color: #ff1949;
+                color: var(--mainColor);
             }
             a {
                 color: var(--blackColor);
-                
+
                 &:hover, &:focus {
-                    color: #ff1949;
+                    color: var(--mainColor);
                     opacity: 1;
                 }
             }
@@ -132,7 +132,7 @@
                 font-weight: 500;
 
                 &:hover, &:focus {
-                    color: #ff1949;
+                    color: var(--mainColor);
                 }
             }
         }
@@ -154,14 +154,14 @@
             color: #cccccc;
             position: relative;
             padding-left: 20px;
-            
+
             i {
                 position: absolute;
                 left: 0;
                 top: 3px;
             }
             &:hover, &:focus {
-                color: #ff1949;
+                color: var(--mainColor);
             }
         }
         &:last-child {
@@ -192,12 +192,12 @@
         margin-right: 6px;
 
         &:hover, &:focus {
-            color: #ff1949;
+            color: var(--mainColor);
         }
     }
 }
 .top-header-style-four {
-    background-color: #ff1949;
+    background-color:#09183A;
     padding: {
         top: 0;
         bottom: 0;
@@ -211,11 +211,11 @@
         li {
             padding-left: 0;
             font-size: 14px;
-            color: #ffffff;
+            color: var(--whiteColor);
 
             a {
                 font-size: 14px;
-                color: #ffffff;
+                color: var(--whiteColor);
                 font-weight: 500;
             }
         }
@@ -224,18 +224,18 @@
         border-left: 1px solid rgba(255, 255, 255, .6);
 
         span {
-            color: #ffffff;
+            color: var(--whiteColor);
         }
         a {
-            color: #ffffff;
+            color: var(--whiteColor);
         }
     }
     .top-header-login-register {
         li {
-            color: #ffffff;
-    
+            color: var(--whiteColor);
+
             a {
-                color: #ffffff;
+                color: var(--whiteColor);
             }
         }
     }
@@ -248,12 +248,11 @@
     margin-top: -10px;
 
     .navbar {
-        background-color: #ffffff;
+        background-color: var(--whiteColor);
         padding: 0 20px;
         border-radius: 3px;
-        
+
         .navbar-brand {
-            width: 144px;
             padding: {
                 top: 0;
                 bottom: 0;
@@ -292,7 +291,7 @@
                         right: 13px;
                     };
                     &:hover, &:focus, &.active {
-                        color: #ff1949;
+                        color:#FF8202;
                     }
                     i {
                         font-size: 17px;
@@ -317,12 +316,12 @@
                 }
                 &:hover, &.active {
                     a {
-                        color: #ff1949;
+                        color: var(--mainColor);
                     }
                 }
                 .dropdown-menu {
                     box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
-                    background: #ffffff;
+                    background: var(--whiteColor);
                     position: absolute;
                     border: none;
                     top: 82px;
@@ -334,7 +333,7 @@
                     visibility: hidden;
                     border-radius: 0;
                     transition: all 0.2s ease-in-out;
-                    border-top: 2px solid #ff1949;
+                    border-top: 2px solid var(--mainColor);
                     padding: 0;
                     transform: scaleX(0);
 
@@ -361,7 +360,7 @@
                                 right: 10px;
                             }
                             &:hover, &:focus, &.active {
-                                color: #ff1949;
+                                color: #FF8202;
                             }
                         }
                         &:last-child {
@@ -375,13 +374,13 @@
                             opacity: 0;
                             visibility: hidden;
                             transform: scaleY(0);
-                            
+
                             li {
                                 a {
                                     color: #4a6f8a;
-                                    
+
                                     &:hover, &:focus, &.active {
-                                        color: #ff1949;
+                                        color: var(--mainColor);
                                     }
                                 }
                                 .dropdown-menu {
@@ -390,13 +389,13 @@
                                     opacity: 0;
                                     visibility: hidden;
                                     transform: scaleY(0);
-        
+
                                     li {
                                         a {
                                             color: #4a6f8a;
-        
+
                                             &:hover, &:focus, &.active {
-                                                color: #ff1949;
+                                                color: var(--mainColor);
                                             }
                                         }
                                         .dropdown-menu {
@@ -405,13 +404,13 @@
                                             opacity: 0;
                                             visibility: hidden;
                                             transform: scaleY(0);
-                
+
                                             li {
                                                 a {
                                                     color: #4a6f8a;
-                
+
                                                     &:hover, &:focus, &.active {
-                                                        color: #ff1949;
+                                                        color: var(--mainColor);
                                                     }
                                                 }
                                                 .dropdown-menu {
@@ -420,13 +419,13 @@
                                                     opacity: 0;
                                                     visibility: hidden;
                                                     transform: scaleY(0);
-                        
+
                                                     li {
                                                         a {
                                                             color: #4a6f8a;
-                
+
                                                             &:hover, &:focus, &.active {
-                                                                color: #ff1949;
+                                                                color: var(--mainColor);
                                                             }
                                                         }
                                                         .dropdown-menu {
@@ -435,13 +434,13 @@
                                                             opacity: 0;
                                                             visibility: hidden;
                                                             transform: scaleY(0);
-                                
+
                                                             li {
                                                                 a {
                                                                     color: #4a6f8a;
-                
+
                                                                     &:hover, &:focus, &.active {
-                                                                        color: #ff1949;
+                                                                        color: var(--mainColor);
                                                                     }
                                                                 }
                                                                 .dropdown-menu {
@@ -450,21 +449,21 @@
                                                                     opacity: 0;
                                                                     visibility: hidden;
                                                                     transform: scaleY(0);
-                                        
+
                                                                     li {
                                                                         a {
                                                                             color: #4a6f8a;
-                
+
                                                                             &:hover, &:focus, &.active {
-                                                                                color: #ff1949;
+                                                                                color: var(--mainColor);
                                                                             }
                                                                         }
                                                                     }
                                                                 }
                                                                 &.active {
                                                                     a {
-                                                                        color: #ffffff;
-                                                                        background-color: #ff1949;
+                                                                        color: var(--whiteColor);
+                                                                        background-color: var(--mainColor);
                                                                     }
                                                                 }
                                                                 &:hover {
@@ -478,7 +477,7 @@
                                                         }
                                                         &.active {
                                                             a {
-                                                                color: #ff1949;
+                                                                color: var(--mainColor);
                                                             }
                                                         }
                                                         &:hover {
@@ -492,7 +491,7 @@
                                                 }
                                                 &.active {
                                                     a {
-                                                        color: #ff1949;
+                                                        color: var(--mainColor);
                                                     }
                                                 }
                                                 &:hover {
@@ -506,7 +505,7 @@
                                         }
                                         &.active {
                                             a {
-                                                color: #ff1949;
+                                                color: var(--mainColor);
                                             }
                                         }
                                         &:hover {
@@ -520,7 +519,7 @@
                                 }
                                 &.active {
                                     a {
-                                        color: #ff1949;
+                                        color: var(--mainColor);
                                     }
                                 }
                                 &:hover {
@@ -534,7 +533,7 @@
                         }
                         &.active {
                             a {
-                                color: #ff1949;
+                                color: var(--mainColor);
                             }
                         }
                         &:hover {
@@ -572,7 +571,7 @@
                     img {
                         width: 35px;
                         border-radius: 5px;
-                        border: 3px solid #ffffff;
+                        border: 3px solid var(--whiteColor);
                         position: relative;
                         top: -2px;
                     }
@@ -613,7 +612,7 @@
                         img {
                             width: 40px;
                             border-radius: 5px;
-                            border: 3px solid #ffffff;
+                            border: 3px solid var(--whiteColor);
                         }
                         span {
                             display: inline-block;
@@ -640,7 +639,7 @@
                 line-height: 1;
                 position: relative;
                 top: 5px;
-                
+
                 i {
                     line-height: 1;
                 }
@@ -650,8 +649,8 @@
                     top: -5px;
                     width: 15px;
                     height: 15px;
-                    background-color: red;
-                    color: #ffffff;
+                    background-color:#FF8202;
+                    color: var(--whiteColor);
                     line-height: 16.5px;
                     text-align: center;
                     border-radius: 3px;
@@ -675,7 +674,7 @@
                     line-height: 1;
                 }
                 &:hover {
-                    color: #ff1949;
+                    color: var(--mainColor);
                 }
             }
         }
@@ -689,7 +688,7 @@
         width: 100%;
         z-index: 999;
         box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.09);
-        background-color: #ffffff !important;
+        background-color: var(--whiteColor) !important;
         animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
     }
 }
@@ -716,137 +715,137 @@
                     left: 0;
                     right: 0;
                 };
-                .nav-item {    
+                .nav-item {
                     a {
-                        color: #ffffff;
-                        
+                        color: var(--whiteColor);
+
                         &:hover, &:focus, &.active {
-                            color: #ff1949;
+                            color: var(--mainColor);
                         }
                     }
                     &:hover, &.active {
                         a {
-                            color: #ff1949;
+                            color: var(--mainColor);
                         }
                     }
                     .dropdown-menu {
                         left: 0;
-    
-                        li {    
+
+                        li {
                             a {
                                 color: #4a6f8a;
-                                
+
                                 &:hover, &:focus, &.active {
-                                    color: #ff1949;
+                                    color: var(--mainColor);
                                 }
                             }
                             .dropdown-menu {
                                 left: 250px;
-                                
+
                                 li {
                                     a {
                                         color: #4a6f8a;
-                                        
+
                                         &:hover, &:focus, &.active {
-                                            color: #ff1949;
+                                            color: var(--mainColor);
                                         }
                                     }
                                     .dropdown-menu {
                                         left: -250px;
-            
+
                                         li {
                                             a {
                                                 color: #4a6f8a;
-            
+
                                                 &:hover, &:focus, &.active {
-                                                    color: #ff1949;
+                                                    color: var(--mainColor);
                                                 }
                                             }
                                             .dropdown-menu {
                                                 left: 250px;
-                    
+
                                                 li {
                                                     a {
                                                         color: #4a6f8a;
-                    
+
                                                         &:hover, &:focus, &.active {
-                                                            color: #ff1949;
+                                                            color: var(--mainColor);
                                                         }
                                                     }
                                                     .dropdown-menu {
                                                         left: -250px;
-                            
+
                                                         li {
                                                             a {
                                                                 color: #4a6f8a;
-                    
+
                                                                 &:hover, &:focus, &.active {
-                                                                    color: #ff1949;
+                                                                    color: var(--mainColor);
                                                                 }
                                                             }
                                                             .dropdown-menu {
                                                                 left: 250px;
-                                    
+
                                                                 li {
                                                                     a {
                                                                         color: #4a6f8a;
-                    
+
                                                                         &:hover, &:focus, &.active {
-                                                                            color: #ff1949;
+                                                                            color: var(--mainColor);
                                                                         }
                                                                     }
                                                                     .dropdown-menu {
                                                                         left: -250px;
-                                            
+
                                                                         li {
                                                                             a {
                                                                                 color: #4a6f8a;
-                    
+
                                                                                 &:hover, &:focus, &.active {
-                                                                                    color: #ff1949;
+                                                                                    color: var(--mainColor);
                                                                                 }
                                                                             }
                                                                         }
                                                                     }
                                                                     &.active {
                                                                         a {
-                                                                            color: #ffffff;
-                                                                            background-color: #ff1949;
+                                                                            color: var(--whiteColor);
+                                                                            background-color: var(--mainColor);
                                                                         }
                                                                     }
                                                                 }
                                                             }
                                                             &.active {
                                                                 a {
-                                                                    color: #ff1949;
+                                                                    color: var(--mainColor);
                                                                 }
                                                             }
                                                         }
                                                     }
                                                     &.active {
                                                         a {
-                                                            color: #ff1949;
+                                                            color: var(--mainColor);
                                                         }
                                                     }
                                                 }
                                             }
                                             &.active {
                                                 a {
-                                                    color: #ff1949;
+                                                    color: var(--mainColor);
                                                 }
                                             }
                                         }
                                     }
                                     &.active {
                                         a {
-                                            color: #ff1949;
+                                            color: var(--mainColor);
                                         }
                                     }
                                 }
                             }
                             &.active {
                                 a {
-                                    color: #ff1949;
+                                    color: var(--mainColor);
                                 }
                             }
                         }
@@ -856,25 +855,25 @@
             .others-option {
                 margin-left: auto;
 
-                .language-switcher {    
+                .language-switcher {
                     .dropdown-toggle {
                         span {
-                            color: #ffffff;
+                            color: var(--whiteColor);
                         }
                     }
                 }
                 .cart-wrapper-btn {
-                    color: #ffffff;
+                    color: var(--whiteColor);
 
                     &:hover, &:focus {
-                        color: #ff1949;
+                        color: var(--mainColor);
                     }
                 }
                 .search-box {
-                    color: #ffffff;
+                    color: var(--whiteColor);
 
                     &:hover {
-                        color: #ff1949;
+                        color: var(--mainColor);
                     }
                 }
             }
@@ -886,132 +885,132 @@
 
             .navbar {
                 .navbar-nav {
-                    .nav-item {    
+                    .nav-item {
                         a {
                             color: var(--blackColor);
-                            
+
                             &:hover, &:focus, &.active {
-                                color: #ff1949;
+                                color: var(--mainColor);
                             }
                         }
                         &:hover, &.active {
                             a {
-                                color: #ff1949;
+                                color: var(--mainColor);
                             }
                         }
-                        .dropdown-menu {        
-                            li {    
+                        .dropdown-menu {
+                            li {
                                 a {
                                     color: #4a6f8a;
                                     border-bottom: 1px dashed #e5e5e5;
-                                    
+
                                     &:hover, &:focus, &.active {
-                                        color: #ff1949;
+                                        color: var(--mainColor);
                                     }
                                 }
-                                .dropdown-menu {                                    
+                                .dropdown-menu {
                                     li {
                                         a {
                                             color: #4a6f8a;
-                                            
+
                                             &:hover, &:focus, &.active {
-                                                color: #ff1949;
+                                                color: var(--mainColor);
                                             }
                                         }
-                                        .dropdown-menu {                
+                                        .dropdown-menu {
                                             li {
                                                 a {
                                                     color: #4a6f8a;
-                
+
                                                     &:hover, &:focus, &.active {
-                                                        color: #ff1949;
+                                                        color: var(--mainColor);
                                                     }
                                                 }
-                                                .dropdown-menu {                        
+                                                .dropdown-menu {
                                                     li {
                                                         a {
                                                             color: #4a6f8a;
-                        
+
                                                             &:hover, &:focus, &.active {
-                                                                color: #ff1949;
+                                                                color: var(--mainColor);
                                                             }
                                                         }
                                                         .dropdown-menu {
                                                             li {
                                                                 a {
                                                                     color: #4a6f8a;
-                        
+
                                                                     &:hover, &:focus, &.active {
-                                                                        color: #ff1949;
+                                                                        color: var(--mainColor);
                                                                     }
                                                                 }
-                                                                .dropdown-menu {                                        
+                                                                .dropdown-menu {
                                                                     li {
                                                                         a {
                                                                             color: #4a6f8a;
-                        
+
                                                                             &:hover, &:focus, &.active {
-                                                                                color: #ff1949;
+                                                                                color: var(--mainColor);
                                                                             }
                                                                         }
-                                                                        .dropdown-menu {                                                
+                                                                        .dropdown-menu {
                                                                             li {
                                                                                 a {
                                                                                     color: #4a6f8a;
-                        
+
                                                                                     &:hover, &:focus, &.active {
-                                                                                        color: #ff1949;
+                                                                                        color: var(--mainColor);
                                                                                     }
                                                                                 }
                                                                             }
                                                                         }
                                                                         &.active {
                                                                             a {
-                                                                                color: #ffffff;
-                                                                                background-color: #ff1949;
+                                                                                color: var(--whiteColor);
+                                                                                background-color: var(--mainColor);
                                                                             }
                                                                         }
                                                                     }
                                                                 }
                                                                 &.active {
                                                                     a {
-                                                                        color: #ff1949;
+                                                                        color: var(--mainColor);
                                                                     }
                                                                 }
                                                             }
                                                         }
                                                         &.active {
                                                             a {
-                                                                color: #ff1949;
+                                                                color: var(--mainColor);
                                                             }
                                                         }
                                                     }
                                                 }
                                                 &.active {
                                                     a {
-                                                        color: #ff1949;
+                                                        color: var(--mainColor);
                                                     }
                                                 }
                                             }
                                         }
                                         &.active {
                                             a {
-                                                color: #ff1949;
+                                                color: var(--mainColor);
                                             }
                                         }
                                     }
                                 }
                                 &.active {
                                     a {
-                                        color: #ff1949;
+                                        color: var(--mainColor);
                                     }
                                 }
                             }
                         }
                     }
                 }
-                .others-option {    
-                    .language-switcher {    
+                .others-option {
+                    .language-switcher {
                         .dropdown-toggle {
                             span {
                                 color: var(--blackColor);
@@ -1020,16 +1019,16 @@
                     }
                     .cart-wrapper-btn {
                         color: var(--blackColor);
-    
+
                         &:hover, &:focus {
-                            color: #ff1949;
+                            color: var(--mainColor);
                         }
                     }
                     .search-box {
                         color: var(--blackColor);
-    
+
                         &:hover {
-                            color: #ff1949;
+                            color: var(--mainColor);
                         }
                     }
                 }
@@ -1040,7 +1039,7 @@
 .navbar-style-three {
     .ednuv-nav {
         margin-top: 0;
-        background-color: #ffffff;
+        background-color: var(--whiteColor);
 
         .navbar {
             border-radius: 0;
@@ -1061,7 +1060,7 @@
 .navbar-style-four {
     .ednuv-nav {
         margin-top: 0;
-        background-color: #ffffff;
+        background-color: var(--whiteColor);
 
         .navbar {
             border-radius: 0;
@@ -1125,7 +1124,7 @@
             height: 3px;
             float: left;
             margin-bottom: 5px;
-            background-color: #ffffff;
+            background-color: var(--whiteColor);
             transition: all 500ms ease;
 
             &:nth-child(1) {
@@ -1138,7 +1137,7 @@
         }
         &:hover {
             .search-overlay-close-line {
-                background: #ff1949;
+                background: var(--mainColor);
                 transform: rotate(180deg);
             }
         }
@@ -1173,10 +1172,10 @@
                 right: 5px;
                 top: 5px;
                 width: 45px;
-                color: #ffffff;
+                color: var(--whiteColor);
                 height: 45px;
                 border-radius: 50%;
-                background-color: #ff1949;
+                background-color: var(--mainColor);
                 transition: var(--transition);
                 border: none;
                 font-size: 20px;
@@ -1184,7 +1183,7 @@
 
                 &:hover {
                     background-color: var(--blackColor);
-                    color: #ffffff;
+                    color: var(--whiteColor);
                 }
             }
         }
@@ -1193,7 +1192,7 @@
         &.search-overlay {
             opacity: 1;
             visibility: visible;
-    
+
             .search-overlay-layer {
                 transform: translateX(0);
             }
@@ -1213,7 +1212,7 @@
 
     .ednuv-responsive-nav {
         display: block;
-        
+
         .ednuv-responsive-menu {
             position: relative;
 
@@ -1233,27 +1232,27 @@
                 .language-switcher {
                     position: relative;
                     top: -1px;
-    
+
                     .dropdown-toggle {
                         padding: 0;
                         border: none;
                         background-color: transparent;
                         font-weight: 500;
-    
+
                         &::after {
                             display: none;
                         }
                         img {
                             width: 35px;
                             border-radius: 5px;
-                            border: 3px solid #ffffff;
+                            border: 3px solid var(--whiteColor);
                             position: relative;
                             top: -2px;
                         }
                         span {
                             display: inline-block;
                             margin-left: 3px;
-    
+
                             i {
                                 position: relative;
                                 font-size: 20px;
@@ -1274,20 +1273,20 @@
                         visibility: visible;
                         transition: var(--transition);
                         transform: scaleX(0);
-    
+
                         .dropdown-item {
                             padding: 0;
                             color: var(--blackColor);
                             margin-bottom: 10px;
                             font-weight: 500;
-    
+
                             &:last-child {
                                 margin-bottom: 0;
                             }
                             img {
                                 width: 40px;
                                 border-radius: 5px;
-                                border: 3px solid #ffffff;
+                                border: 3px solid var(--whiteColor);
                             }
                             span {
                                 display: inline-block;
@@ -1314,7 +1313,7 @@
                     line-height: 1;
                     position: relative;
                     top: 5px;
-                    
+
                     i {
                         line-height: 1;
                     }
@@ -1324,8 +1323,8 @@
                         top: -5px;
                         width: 15px;
                         height: 15px;
-                        background-color: red;
-                        color: #ffffff;
+                        background-color:#FF8202;
+                        color: var(--whiteColor);
                         line-height: 16.5px;
                         text-align: center;
                         border-radius: 3px;
@@ -1344,12 +1343,12 @@
                     line-height: 1;
                     position: relative;
                     top: 4px;
-    
+
                     i {
                         line-height: 1;
                     }
                     &:hover {
-                        color: #ff1949;
+                        color: var(--mainColor);
                     }
                 }
             }
@@ -1361,7 +1360,7 @@
         }
     }
     .navbar-area {
-        background-color: #ffffff;
+        background-color: var(--whiteColor);
         padding: {
             top: 15px;
             bottom: 15px;
@@ -1523,7 +1522,7 @@
 
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
-    
+
     .top-header-contact-info {
         li {
             flex: 0 0 33.3333333333%;
