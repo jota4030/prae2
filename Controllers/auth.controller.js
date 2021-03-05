@@ -12,7 +12,6 @@ async function login(req, res, next) {
             let validPassword = user.comparePassword(params.f_password);
             if (validPassword) {
                 let token = jwt.sign({ userId: user._id }, db_secret, { "expiresIn": "24h" });
-                console.log(token)
                 return res.json({ status: 200, success: true, mensaje: "Login Exito", login: { user, token: token } });
             } else {
                 return responseErrorGeneric(res, 401, "Contraseña incorrecta")

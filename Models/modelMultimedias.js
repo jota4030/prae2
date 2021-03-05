@@ -7,7 +7,7 @@ mongoose.Promise = global.Promise;
 let c_multimedias = new Schema({
 	f_pagina: { type: Schema.Types.ObjectId, required: true, ref: 'c_paginas' },
 	f_descripcion: { type: String, required: true },
-	f_id_elemento: { type: String, required: true },
+	f_id_elemento: { type: String, required: false },
 	f_url: { type: String, required: true },
 	f_tipo_multimedia: { type: Number, required: true }, // 1 => imagen, 2 => video normal (mp4), 3 => video Youtube, 4 => PDF
 	f_fecha: { type: Date, default: Date.now },

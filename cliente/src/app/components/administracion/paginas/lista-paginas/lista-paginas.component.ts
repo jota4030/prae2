@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PaginasService } from "../../../../services/paginas.service";
+import Swal from 'sweetalert2'
 
 declare var $: any;
 
@@ -25,9 +26,7 @@ export class ListaPaginasComponent implements OnInit {
     this.paginasService.getPaginasFiltro(params).subscribe((data: any) => {
       if (data.success) {
         this.paginas = [...data.paginas]
-      } else {
-        console.log(data.mensaje)
-      }
+      } 
     })
   }
   eventoClickEditarPagina(evento: any, row: any) {
@@ -40,7 +39,11 @@ export class ListaPaginasComponent implements OnInit {
   eventoClickDesactivarPagina(evento: any, row: any) {
     let params = { _id: row._id, f_activo: !row.f_activo} 
     this.paginasService.actualizarPagina(params).subscribe((datos: any) => {
-      location.reload()
+      this.paginas = this.paginas.filter((pagina: any) => {
+        return pagina._id != datos.pagina._id
+      })
+      this.paginas = [...this.paginas, datos.pagina]
+      this.mensajeAlerta(`Se ${datos.pagina.f_activo ? 'Activó' : 'Desactivó'} correctamente`)
     })
   }
 
@@ -52,9 +55,25 @@ export class ListaPaginasComponent implements OnInit {
   }
   agregarPaginaNueva(datos: any) {
     $('#cerrarModelPagina').click();
-    location.reload()
+    this.mensajeAlerta(`Se ${datos.accion ? 'Creó' : 'Actualizó'} correctamente`)
+    if (!datos.accion) {
+      this.paginas = this.paginas.filter((pagina: any) => {
+        return pagina._id != datos.pagina._id
+      })
+    }
+    this.paginas = [...this.paginas, datos.pagina]
   }
   modalCerrar(id: string) {
     $(id).click();
+  }
+
+  mensajeAlerta(mensaje: string, icon: any = "success", ) {
+    Swal.fire({
+      position: 'top-end',
+      icon: icon,
+      title: mensaje,
+      showConfirmButton: false,
+      timer: 1500
+    })
   }
 }

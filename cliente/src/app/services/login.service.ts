@@ -17,9 +17,7 @@ export class LoginService {
 
   setLocalStorage(params: any) {
     let paramsKey: Array<any> = Object.keys(params);
-    console.log(paramsKey)
     paramsKey.forEach((param) => {
-      console.log(param)
       let parametroAtring = typeof params[param] == 'string' ? params[param] : JSON.stringify(params[param]);
       localStorage.setItem(param, parametroAtring);
     })

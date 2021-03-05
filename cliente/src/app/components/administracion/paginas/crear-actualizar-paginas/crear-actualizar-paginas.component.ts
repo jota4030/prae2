@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter, SimpleChanges, ChangeDetectorRef } from '@angular/core';
 import { FormControl, FormGroupDirective, NgForm, Validators, FormGroup, FormBuilder } from '@angular/forms';
 import { PaginasService } from '../../../../services/paginas.service'
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-crear-actualizar-paginas',
@@ -29,9 +30,7 @@ export class CrearActualizarPaginasComponent implements OnInit {
     if (changes.conmutador && this.accion !== undefined) {
       if (this.accion) {
         this.paginaForm.reset();
-        this.borrar()
       } else {
-        console.log(changes)
         this.paginaForm.patchValue(this.pagina)
       }
     }
@@ -44,7 +43,6 @@ export class CrearActualizarPaginasComponent implements OnInit {
         pagina: datos.pagina
       })
       this.paginaForm.reset()
-      this.borrar()
     }
     if (form.valid) {
       if (this.accion) {
@@ -61,12 +59,14 @@ export class CrearActualizarPaginasComponent implements OnInit {
         })
       }
     } else {
-      console.log("Faltan Parametros")
+      Swal.fire({
+        position: 'top-end',
+        icon: 'warning',
+        title: "Faltan Parametros",
+        showConfirmButton: false,
+        timer: 1500
+      })
     }
   }
   cancelar() { }
-  borrar() {
-    this.pagina = {};
-    this.accion = 1;
-  }
 }

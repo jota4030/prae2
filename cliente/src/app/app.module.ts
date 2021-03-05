@@ -30,6 +30,10 @@ import { HeaderStyleTwoComponent } from './components/main-structure/header-styl
 import { HeaderStyleThreeComponent } from './components/main-structure/header-style-three/header-style-three.component';
 import { HeaderStyleFourComponent } from './components/main-structure/header-style-four/header-style-four.component';
 import { BecomeInstructorPartnerComponent } from './components/main-structure/become-instructor-partner/become-instructor-partner.component';
+import { ImagenesComponent } from './components/template-multimedias/imagenes/imagenes.component';
+import { VideosMp4Component } from './components/template-multimedias/videos-mp4/videos-mp4.component';
+import { VideosYoutubeComponent } from './components/template-multimedias/videos-youtube/videos-youtube.component';
+import { PdfComponent } from './components/template-multimedias/pdf/pdf.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +54,10 @@ import { BecomeInstructorPartnerComponent } from './components/main-structure/be
     HomeoneMainBannerComponent,
     BecomeInstructorPartnerComponent,
     HomeoneAboutComponent,
+    ImagenesComponent,
+    VideosMp4Component,
+    VideosYoutubeComponent,
+    PdfComponent,
   ],
   imports: [
     BrowserModule,

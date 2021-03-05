@@ -3,6 +3,7 @@ import { FormControl, FormGroupDirective, NgForm, Validators, FormGroup, FormBui
 import { LoginService } from '../../../services/login.service';
 import { LoginRouteGuard } from "../../../router/guard/auth-guard";
 import { Router, ActivatedRoute } from "@angular/router";
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-login-page',
@@ -36,24 +37,30 @@ export class LoginPageComponent implements OnInit {
     if (form.valid) {
       this.usuario.f_username = form.value["f_username"]
       this.usuario.f_password = form.value["f_password"]
-      console.log("1")
       this.loginService.login(this.usuario).subscribe((data: any) => {
-        console.log("2")
         if (data.success) {
-          console.log("3")
           that.loginService.setLocalStorage(data.login);
-          console.log(that.previousUrl)
           if (that.previousUrl) {
             that.router.navigate([that.previousUrl]);
           } else {
             that.router.navigate(["/home"]);
           }
         } else {
-          console.log(data.mensaje)
+          this.mensajeAlerta(data.mensaje)
         }
       });
     } else {
-      console.log('Digite todos los campos')
+      this.mensajeAlerta('Digite todos los campos')
     }
+  }
+
+  mensajeAlerta(mensaje: string, icon: any = "warning", ) {
+    Swal.fire({
+      position: 'top-end',
+      icon: icon,
+      title: mensaje,
+      showConfirmButton: false,
+      timer: 1500
+    })
   }
 }

@@ -15,7 +15,7 @@ async function actualizarMultimedia(req, res, next) {
     let requestParametros = req.body;
     if (requestParametros._id) {
         let idMultimedia = mongoose.Types.ObjectId(requestParametros._id)
-        let multimedia = await Multimedias.findOne({ _id: idMultimedia }).populate(Multimedias.getCamposObjectId().join(' '));
+        let multimedia = await Multimedias.findOne({ _id: idMultimedia });
 
         Object.keys(requestParametros).forEach(parametro => {
             if (parametro == '_id') {
@@ -24,7 +24,7 @@ async function actualizarMultimedia(req, res, next) {
             multimedia[parametro] = requestParametros[parametro]
         });
         multimedia = await multimedia.save();
-
+        multimedia = await multimedia.populate(Multimedias.getCamposObjectId().join(' ')).execPopulate();
         return res.json({ status: 200, success: true, mensaje: "Multimedia Actualizada", multimedia });
     } else {
         res.send({ status: 400, error: 'Faltan Campos Requeridos' });

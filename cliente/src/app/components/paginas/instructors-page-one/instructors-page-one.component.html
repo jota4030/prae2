@@ -3,24 +3,15 @@
 <h1>Ejemplo de Recursossssss</h1>
 </div>
 
-<section  style="text-align:center;">
-
-  <div>
-    <iframe id="video1"  width="720" height="480" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br><br>
-    <iframe id="video2"  width="720" height="480"src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
-    <iframe id="video3"  width="720" height="480"src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
-
+<section  class="mx-5">
+  <div class="row">
+    <div class="col-{{multimedia.f_tipo_multimedia == 4 ? '12' : '4'}} mb-5" *ngFor="let multimedia of multimedias">
+      <app-imagenes [src]="multimedia.f_url" *ngIf="TiposMultimedias.IMAGENES == multimedia.f_tipo_multimedia"></app-imagenes>
+      <app-videos-mp4 [src]="multimedia.f_url" *ngIf="TiposMultimedias.VIDEOS_MP4 == multimedia.f_tipo_multimedia"></app-videos-mp4>
+      <app-videos-youtube [src]="multimedia.f_url" *ngIf="TiposMultimedias.VIDEOS_YOUTUBE == multimedia.f_tipo_multimedia"></app-videos-youtube>
+      <app-pdf [src]="multimedia.f_url" *ngIf="TiposMultimedias.PDF == multimedia.f_tipo_multimedia"></app-pdf>
+    </div>
   </div>
-<div class="centrado">
-
-  <img id="imagen1" src="" style="width:75%; height:75%"><br><br>
-  <img id="imagen1" src="" style="width:75%; height:75%"><br><br><br><br>
-</div>
-  <div>
-  <iframe id="pdf1"  src="" frameborder="0" width="1080" height="720"></iframe><br><br><br>
-  <iframe id="pdf2"  src="" frameborder="0" width="1080" height="720"></iframe><br>
-</div>
-
 </section>
 
 <app-footer></app-footer>

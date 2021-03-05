@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MultimediasService } from "../../../../services/multimedias.service";
+import Swal from 'sweetalert2'
 
 declare var $: any;
 
@@ -21,12 +22,12 @@ export class ListaMultimediasComponent implements OnInit {
   }
 
   inicializacion() {
-    let params = { }
+    let params = {}
     this.multimediasService.getMultimediasFiltro(params).subscribe((data: any) => {
       if (data.success) {
         this.multimedias = [...data.multimedias]
       } else {
-        console.log(data.mensaje)
+        
       }
     })
   }
@@ -34,13 +35,17 @@ export class ListaMultimediasComponent implements OnInit {
     this.conmutadorModelAgregarMultimedia = !this.conmutadorModelAgregarMultimedia
     this.accionModelAgregarMultimedia = 0
     this.multimedia = row
-      $('#modalAgregarMultimedia').click();
+    $('#modalAgregarMultimedia').click();
   }
 
   eventoClickDesactivarMultimedia(evento: any, row: any) {
-    let params = { _id: row._id, f_activo: !row.f_activo} 
+    let params = { _id: row._id, f_activo: !row.f_activo }
     this.multimediasService.actualizarMultimedia(params).subscribe((datos: any) => {
-      location.reload()
+      this.multimedias = this.multimedias.filter((multimedia: any) => {
+        return multimedia._id != datos.multimedia._id
+      })
+      this.multimedias = [...this.multimedias, datos.multimedia]
+      this.mensajeAlerta(`Se ${datos.multimedia.f_activo ? 'Activó' : 'Desactivó'} correctamente`)
     })
   }
 
@@ -52,9 +57,25 @@ export class ListaMultimediasComponent implements OnInit {
   }
   agregarMultimediaNueva(datos: any) {
     $('#cerrarModelMultimedia').click();
-    location.reload()
+    this.mensajeAlerta(`Se ${datos.accion ? 'Creó' : 'Actualizó'} correctamente`)
+    if (!datos.accion) {
+      this.multimedias = this.multimedias.filter((multimedia: any) => {
+        return multimedia._id != datos.multimedia._id
+      })
+    }
+    this.multimedias = [...this.multimedias, datos.multimedia]
   }
   modalCerrar(id: string) {
     $(id).click();
+  }
+
+  mensajeAlerta(mensaje: string, icon: any = "success", ) {
+    Swal.fire({
+      position: 'top-end',
+      icon: icon,
+      title: mensaje,
+      showConfirmButton: false,
+      timer: 1500
+    })
   }
 }

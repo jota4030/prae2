@@ -2,6 +2,7 @@ import { Component, OnInit, Input, Output, EventEmitter, SimpleChanges, ChangeDe
 import { FormControl, FormGroupDirective, NgForm, Validators, FormGroup, FormBuilder } from '@angular/forms';
 import { MultimediasService } from '../../../../services/multimedias.service'
 import { PaginasService } from '../../../../services/paginas.service'
+import Swal from 'sweetalert2'
 
 declare var $: any;
 
@@ -14,7 +15,6 @@ export class CrearActualizarMultimediaComponent implements OnInit {
   multimediaForm = new FormGroup({
     f_descripcion: new FormControl('', [Validators.required]),
     f_pagina: new FormControl(),
-    f_id_elemento: new FormControl('', [Validators.required]),
     f_url: new FormControl('', [Validators.required]),
     f_tipo_multimedia: new FormControl('', [Validators.required]),
     f_nota: new FormControl(),
@@ -35,7 +35,6 @@ export class CrearActualizarMultimediaComponent implements OnInit {
     let params = { f_activo: true }
     this.paginasService.getPaginasFiltro(params).subscribe((data: any) => {
       if (data.success) {
-        console.log(data.paginas)
         this.paginas = [...data.paginas]
       }
     })
@@ -68,14 +67,10 @@ export class CrearActualizarMultimediaComponent implements OnInit {
       this.evento_aceptar.emit({
         accion: this.accion,
         formulario: form.value,
-        pagina: datos.pagina
+        multimedia: datos.multimedia
       })
-      this.multimediaForm.reset()
-      this.borrar()
     }
     form.value["f_pagina"] = this.pagina.id
-    console.log(form.value)
-    console.log(form.valid)
     if (form.valid && form.value["f_pagina"]) {
       if (this.accion) {
         form.value["f_activo"] = true;
@@ -90,15 +85,19 @@ export class CrearActualizarMultimediaComponent implements OnInit {
         })
       }
     } else {
-      console.log("Faltan Parametros")
+      Swal.fire({
+        position: 'top-end',
+        icon: 'warning',
+        title: "Faltan Parametros",
+        showConfirmButton: false,
+        timer: 1500
+      })
     }
   }
   cancelar() { }
   borrar() {
     $("#selectPaginas").val('');
     $("#selectPaginas").trigger('change');
-    this.multimedia = {};
-    this.accion = 1;
   }
 
 }
